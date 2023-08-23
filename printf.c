@@ -56,11 +56,11 @@ int _printf(const char *format, ...)
 					printed_char += print_mem_address(ptr);
 					break;
 				case 'r':
- 					str = va_arg(args, char *);
- 
- 					printed_char += print_str_reverse(str);
- 					break;
- 
+					str = va_arg(args, char *);
+
+					printed_char += print_str_reverse(str);
+					break;
+
 				case 's':
 					str = va_arg(args, char *);
 
