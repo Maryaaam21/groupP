@@ -68,6 +68,12 @@ int _printf(const char *format, ...)
 					if (*str)
 						printed_char += _puts(str);
 					break;
+
+				case 'd':
+					n = va_arg(args, int);
+
+					printed_char += print_integers(n);
+					break;
 				default:
 					_putchar('%');
 					_putchar(*format);
