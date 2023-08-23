@@ -17,6 +17,6 @@ int _puts(char *s)
 		str++;
 	}
 
-	return (printed_count);
+	return (char_count);
 
 }
