@@ -22,7 +22,7 @@ int print_str_reverse(char *strings)
 
 	for (i = len - 1; i > -1; i--)
 	{
-		_putchar(strings[s]);
+		_putchar(strings[i]);
 		printed_count++;
 	}
 

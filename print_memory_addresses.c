@@ -8,10 +8,10 @@
 int print_mem_address(void *the_ptr)
 {
 	int hex_digits = 0;
-	unsigned long int temp = address;
 	int index;
 	int printed_count = 0;
 	unsigned long int address = (unsigned long int)the_ptr;
+	unsigned long int temp = address;
 	char *digits = "0123456789abcdef";
 
 

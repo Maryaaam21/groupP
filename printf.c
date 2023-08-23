@@ -56,10 +56,11 @@ int _printf(const char *format, ...)
 					printed_char += print_mem_address(ptr);
 					break;
 				case 'r':
-					str = va_arg(args, char *);
-					printed_char += print_str_reverse(str);
-					break;
-
+ 					str = va_arg(args, char *);
+ 
+ 					printed_char += print_str_reverse(str);
+ 					break;
+ 
 				case 's':
 					str = va_arg(args, char *);
 
@@ -87,6 +88,15 @@ int _printf(const char *format, ...)
 					n = va_arg(args, int);
 
 					printed_char += print_integers(n);
+					break;
+				case 'o':
+					n5 = va_arg(args, unsigned int);
+
+					printed_char += print_unsigned_bases(n5, 8);
+					break;
+				case '%':
+					_putchar('%');
+					printed_char++;
 					break;
 				default:
 					_putchar('%');

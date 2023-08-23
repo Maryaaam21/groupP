@@ -10,11 +10,11 @@ int _puts(char *s)
 {
 	int char_count = 0;
 
-	while (*str)
+	while (*s)
 	{
-		_putchar(*str);
+		_putchar(*s);
 		char_count++;
-		str++;
+		s++;
 	}
 
 	return (char_count);
