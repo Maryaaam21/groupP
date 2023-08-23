@@ -68,7 +68,21 @@ int _printf(const char *format, ...)
 					if (*str)
 						printed_char += _puts(str);
 					break;
+				case 'b':
+					n1 = va_arg(args, unsigned int);
 
+					printed_char += print_unsigned_bases(n1, 2);
+					break;
+				case 'X':
+					n3 = va_arg(args, unsigned int);
+
+					printed_char += print_unsigned_caps(n3, 16);
+					break;
+				case 'i':
+					n4 = va_arg(args, int);
+
+					printed_char += print_integers(n4);
+					break;
 				case 'd':
 					n = va_arg(args, int);
 
