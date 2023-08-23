@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 
 	va_start(args, format);
-	
+
 	if (format == NULL)
 		return (-1);
 	while (*format && format)
@@ -50,6 +50,23 @@ int _printf(const char *format, ...)
 					n6 = va_arg(args, unsigned int);
 
 					printed_char += print_unsigned_bases(n6, 16);
+					break;
+				case 'p':
+					ptr = va_arg(args, void *);
+					printed_char += print_mem_address(ptr);
+					break;
+				case 'r':
+					str = va_arg(args, char *);
+					printed_char += print_str_reverse(str);
+					break;
+
+				case 's':
+					str = va_arg(args, char *);
+
+					if (str == NULL)
+						str = "(null)";
+					if (*str)
+						printed_char += _puts(str);
 					break;
 				default:
 					_putchar('%');
