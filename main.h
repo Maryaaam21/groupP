@@ -12,7 +12,7 @@ int _putchar(char c);
 int _puts(char *s);
 
 
-int print_int(int the_num);
+int print_integers(int the_num);
 int print_address(void *the_ptr);
 int print_reverse(char *stringz);
 int print_str(va_list argz);
